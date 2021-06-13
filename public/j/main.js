@@ -9,7 +9,7 @@ Parser.prototype = {
     try {
       var old = player;
       eval(code);
-      old.destroy();
+      old && old.destroy();
       window.player = player;
       this.console.empty();
     } catch(err) {
@@ -17,10 +17,3 @@ Parser.prototype = {
     }
   }
 };
-$(document).ready(function() {
-  var parser = new Parser($('#output'));
-  $('.run').click(function() {
-    var code = ace.edit('editor').getSession().getValue();
-    parser.parse(code);
-  });
-})

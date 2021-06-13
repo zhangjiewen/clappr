@@ -41,7 +41,7 @@ body {
 }
 
 a:hover {
-  color: #fff;
+  color: #aaa;
   text-decoration: none;
 }
 
@@ -63,8 +63,23 @@ a:hover {
 .main {
   display: inline-block;
   margin: 0;
-  padding: 40px 20px 0 20px;
+  padding: 0px 20px 0 20px;
   border: 0;
+}
+
+.external-js {
+  border-style: solid;
+  border-width: 1px;
+  color: #dcdcdc;
+  font-size: 10px;
+  padding: 2px;
+  margin-right: 2px;
+  font-family: monospace;
+}
+
+#player-wrapper {
+  min-width: 320px;
+  min-height: 180px;
 }
 
 .sidebar {
@@ -78,7 +93,7 @@ a:hover {
 
 #editor {
   border: 1px solid #c0c0EE;
-  height: 360px;
+  min-height: 360px;
 }
 
 #console {
